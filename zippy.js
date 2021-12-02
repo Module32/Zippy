@@ -36,5 +36,3 @@ function zippy() {
 }
 
 module.exports = { zippy }
-
-console.log(zippy())
