@@ -1,0 +1,13 @@
+{
+	"name": "@module64/zippy",
+	"version": "1.1.0",
+	"description": "A module for Zippy!",
+	"repository": "module32/Zippy",
+	"main": "zippy.js",
+	"keywords": [
+		"os-module",
+		"module64",
+		"computer",
+		"simple"
+	]
+}
