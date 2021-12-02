@@ -8,17 +8,26 @@ function zippy() {
     console.log("Zippy's getting to work...\n")
     try {
         return {
-            "hostname": os.hostname(),
             "name": os.type(),
+            "total-memory": os.totalmem(),
+            "free-memory": os.freemem(),
+            "user-info": os.userInfo(),
+            "network-int": os.networkInterfaces(),
             "os-info": {
+                "hostname": os.hostname(),
+                "type": os.type(),
+                "constants": os.constants,
+                "EOL": os.EOL,
+                "platform": os.platform(),
                 "release": os.release(),
-                "homedir": JSON.stringify(os.cpus()),
-                "freememory": os.freemem(),
-                "loadavg": os.loadavg(),
+                "homedir": os.cpus(),
+                "load-avg": os.loadavg(),
+                "uptime": os.uptime(),
+                "version": os.version(),
             },
             "cpu-info": {
                 "arch": os.arch(),
-                "cpus": JSON.stringify(os.cpus()),
+                "cpus": os.cpus(),
             },
         }
     } catch (err) {
@@ -27,3 +36,5 @@ function zippy() {
 }
 
 module.exports = { zippy }
+
+console.log(zippy())
