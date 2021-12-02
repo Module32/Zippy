@@ -26,4 +26,4 @@ function zippy() {
     }
 }
 
-console.log(zippy())
+module.exports = { zippy }
